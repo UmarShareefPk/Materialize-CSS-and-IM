@@ -1,0 +1,114 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+  <title>Toyota Motor Europe</title>
+  <style>
+
+      @media only screen and (max-width: 600px) {
+        .main {
+                 min-height: 20vh; /* use "vh" instead of % */
+        }   
+      .vMargin {
+                margin-top: 5vh; /* use "vh" instead of % */
+        }       
+
+        .logo {
+            height: 100px !important;
+            width: 110px;
+            margin-right: 50px;
+        }
+      }
+
+      @media only screen and (min-width: 1300px) {
+        .main {
+                 min-height: 100vh; /* use "vh" instead of % */
+                 
+        }     
+      .vMargin {
+                 margin-top: 0vh;
+        } 
+
+        .logo {
+            height: 148px !important;
+            width: 147px;
+        }  
+        .loginForm {
+            /* border:2px solid gray;   */
+        }
+
+        .bg {
+            min-height: 100vh !important;
+            background-image: url('../Tme/img/toyota.jpg');
+            
+        }
+      }
+
+
+  </style>
+</head>
+<body>
+    
+    
+    <div class=" main ">   
+        <div class="row">
+            <div class="col s12 l6">
+                <div class="row">
+                    <div class="col s12 l12">
+                        <img  src="../Tme/img/Toyota Logo.png" class="responsive-img  logo">
+                    </div>
+                    <div class="col s12 l10 offset-l2  vMargin loginForm">                
+                        
+                        <h3> WELCOME!</h3>               
+                        <br/>    
+                        <h6>User Login</h6>
+                            <br/>                            
+                            <form>
+                                <div class="input-field">
+                                    <i class="material-icons prefix">email</i>
+                                    <input type="email" id="email">
+                                    <label for="email">Your Email</label>
+                                </div>
+                                <div class="input-field">
+                                    <i class="material-icons prefix">password</i>
+                                    <input type="password" id="password">
+                                    <label for="password">Your Password</label>
+                                </div>
+                                <div class="input-field">
+                                    <a> Forgot password?</a>
+                                </div>
+                                <div class="input-field ">
+                                    <button class="btn indigo darken-2">
+                                        <span>Login</span>
+                                        <i class="material-icons right">send</i>
+                                      </a>  
+                                    </button>
+                                </div>
+                            </form>                
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12 l6 bg hide-on-med-and-down">
+                
+            </div>
+           
+        </div>     
+       
+    </div>
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.sidenav').sidenav();
+    });
+  </script>
+</body>
+</html>

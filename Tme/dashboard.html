@@ -1,0 +1,195 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+  <title>Toyota Motor Europe</title>
+  <style>
+
+      @media only screen and (max-width: 600px) {
+        .welcome {
+            font-size:10px;
+        }  
+      .vMargin {
+                margin-top: 5vh; /* use "vh" instead of % */
+        }       
+
+        .welcome {
+            font-size: x-small;
+        }
+        .nav {
+            min-height: 6vh !important;
+        } 
+      }
+
+      @media only screen and (min-width: 1300px) {
+        
+      .nav {
+            min-height: 5vh !important;
+        } 
+
+        .rTitle {
+            font-size:larger;
+            font-weight: bold;
+        }  
+        .filter {
+            margin-top: -19px;
+        }
+
+        .bg {
+            min-height: 100vh !important;
+            background-image: url('../Tme/img/toyota.jpg');
+            
+        }
+      }
+
+      tr.spaceUnder>td {
+             padding-bottom: 1em !important;
+        }
+
+  </style>
+</head>
+<body>
+  
+<div class="container">
+      <!-- Top  -->
+    <div class="row ">
+        <div class="col l1 s3">
+            <img src="/Tme/img/Toyota Logo.png" class="responsive-img" />
+        </div>
+        <div class="col s9 l11">
+            <div class="row " >
+                <div class="col l6 s5 black white-text left-align nav">
+                   <span class="gray-text welcome">Welcome</span>  <span class="welcome">Usermame </span>
+                </div>
+                <div class="col l6 s7 black white-text right-align nav">
+                    <button class="btn-small blue welcome">MENU</button>
+
+                </div>
+                <div class="col s3 l3">
+                   <span class="rTitle">Dashboard</span> 
+                </div>
+                <div class="col s9 l9 right-align">
+                    <a>Hierarchy</a>
+                </div>
+
+            </div>
+        </div>
+
+    </div> <!-- end Top-->
+
+    <!-- Filter-->
+    <div class="row filter">
+        <div class="col s12 l6">
+            <ul class="tabs">
+                <li class="tab  ">
+                    <button class="waves-effect waves-teal btn-flat">Overall</button>                
+                </li>
+                <li class="tab  ">
+                    <button class="waves-effect waves-teal btn-flat">Prospect</button>               
+                </li>
+                <li class="tab  ">
+                    <button class="waves-effect waves-teal btn-flat">Purchase</button>                   
+                  </li>
+                  <li class="tab  ">
+                    <button class="waves-effect waves-teal btn-flat">Service</button>                  
+                  </li>
+              </ul>
+        </div>
+        <div class="col s12 l6 right-align">
+            <button class="waves-effect waves-teal btn-flat welcome">Models</button>    
+            <a href="#" class="waves-effect waves-teal btn-flat">                
+                <i class="material-icons">phone</i>
+              </a>
+              <button class="waves-effect waves-teal btn-flat welcome">1/11/2020 to 30/11/2010</button> 
+              <a href="#" class="" style="margin-top: 2%;">                
+                <i class="material-icons" > check</i>
+              </a>
+              
+        </div>
+    </div>
+    <!-- End Filter-->
+
+    <!-- KPI-->
+
+    <div class="row grey">
+        <div class="col s12 m12 l4"> 
+            <table>
+                <tr>
+                    <td>Overall</td>
+                    <td>87.9</td>
+                    <td>2.5%</td>
+                    <td>7%</td>
+                    <td>92.5%</td>
+                </tr>
+                <tr>
+                    <td>Prospect</td>
+                    <td>87.9</td>
+                    <td>2.5%</td>
+                    <td>7%</td>
+                    <td>92.5%</td>
+                </tr>
+                <tr>
+                    <td>Purchase</td>
+                    <td>87.9</td>
+                    <td>2.5%</td>
+                    <td>7%</td>
+                    <td>92.5%</td>
+                </tr>
+                <tr>
+                    <td>Service</td>
+                    <td>87.9</td>
+                    <td>2.5%</td>
+                    <td>7%</td>
+                    <td>92.5%</td>
+                </tr>
+            </table>       
+           
+
+        
+
+        </div>
+        <div class="col s12 m12 l4">
+            <span style="padding: 10px;"> Surveys </span>
+            <span style="padding: 10px;"> 87.9 </span>
+            <span style="padding: 10px;"> 2.5% </span>
+            <span style="padding: 10px;"> 7% </span>
+            <span style="padding: 10px;"> 92.5% </span>
+        </div>
+        <div class="col s12 m12 l4">
+            <span style="padding: 10px;"> Closed Loop </span>
+            <span style="padding: 10px;"> 87.9 </span>
+            <span style="padding: 10px;"> 2.5% </span>
+            <span style="padding: 10px;"> 7% </span>
+            <span style="padding: 10px;"> 92.5% </span>
+        </div>
+
+        <div class="col s12 m12 l3">
+            KPI 4
+        </div>
+        <div class="col s9 m9 l7">
+            KPI 5
+        </div>
+        <div class="col s3 m3 l2">
+            KPI 6
+        </div>
+
+    </div>
+     <!-- End KPI-->
+</div> <!-- end conatiner-->
+
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.sidenav').sidenav();
+    });
+  </script>
+</body>
+</html> 

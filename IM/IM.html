@@ -1,0 +1,342 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <title>Incident Manager</title>
+    <style>
+     
+            nav .badge{
+            position: relative;
+            top: 20px;
+            right: 20px;
+            }
+
+            .pagination li.active {
+                background-color: #1A237E;
+            }
+
+            .brand-logo{
+                white-space: nowrap;
+            }
+            
+            .title{
+                color:#1A237E;
+            }
+
+            /* .titleBar{
+                border-bottom: 1px solid  #1A237E;
+            } */
+
+            .titleBar ul li{
+               display: inline;
+            }
+
+            .titleBar .row{
+                margin-top: -100px;
+            } 
+        
+        /* Small devices  */
+        @media (min-width: 300px) {
+            
+        }
+
+        /* (tablets, 768px and up) */
+        @media (min-width: 700px) {}
+
+        /* Large Tablets  */
+        @media (min-width: 1000px) {
+           
+        }
+
+        /* Computer */
+        @media (min-width: 1500px) {
+               .incidentsTbl th{
+                   color: #1A237E;
+                   white-space: nowrap;
+                   width: 14%;
+               }    
+
+               .incidentsTbl .header{
+                   position: sticky;
+                   top:0;
+               }         
+        }
+    </style>
+</head>
+
+<body>
+    <!-- navbar -->
+  <header>
+    <nav class="nav-wrapper indigo darken-4">
+      <div class="container">
+
+        <a href="#" class="brand-logo">Incident Manager</a>
+        <a href="#" class="sidenav-trigger" data-target="mobile-menu">
+          <i class="material-icons">menu</i>
+        </a>
+        <ul class="right hide-on-med-and-down">
+          <li><a >Incidents</a></li>
+          <li><a>Users <i class="material-icons"></i> </a> </li>
+          <li><a >Contact</a></li>   
+          <li><a href="" class="btn-floating z-depth-0 indigo darken-4">
+            <i class="material-icons">notifications</i>
+          </a></li>
+          <li><span class="badge white-text new pink">5</span></li>     
+        </ul>
+        <!-- for mobile-->
+        <ul class="sidenav grey lighten-2" id="mobile-menu">          
+          <li><a  class="sidenav-close">Incidents</a></li>
+          <li><a  class="sidenav-close">Users</a></li>
+          <li><a  class="sidenav-close">Contact</a></li>
+          <li><a href="" class=" white-text">
+            <i class="material-icons">notifications</i>
+            <span class="Indigo-text" >5</span>
+          </a></li>  
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+<section class="container titleBar">
+
+    <div class="row ">
+        <div class="col s12">
+            <div class="left">
+                <h4 class="title">Incidents</h4>
+            </div>
+            <div class="right">
+                <ul>
+                    <li><a class="btn-floating green"><i class="material-icons">refresh</i></a></li>
+                    <li><a class="btn-floating red"><i class="material-icons">print</i></a></li>
+                    <li><a class="btn-floating blue"><i class="material-icons">file_download</i></a></li>
+                </ul>
+                
+            </div>
+        </div>        
+    </div> 
+
+    <!-- <div class="fixed-action-btn right">
+        <a class="btn-floating btn-large indigo darken-4">
+            <i class="large material-icons">mode_edit</i>
+        </a>
+        <ul>
+            <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+            <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+            <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+            <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+        </ul>
+        </div> -->    
+
+</section>
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col s12 l12">
+                <table class="responsive-table highlight incidentsTbl"> 
+                    <thead>
+                      <tr class="header" data-target="blue">
+                          <th>Title</th>
+                          <th>Description</th>
+                          <th>Assigned TO</th>
+                          <th>Created By</th>
+                          <th>Created Date</th>
+                          <th>Due Date</th>
+                          <th>Status</th>
+                      </tr>
+                    </thead>
+            
+                    <tbody>
+                      <tr >
+                        <td>First incident</td>
+                        <td class="description" title = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque perferendis ipsum repudiandae nulla sequi culpa! Sint nulla fugit quidem tenetur magni corrupti expedita magnam vitae, at totam voluptatum iusto aliquam.">Lorem ipsum dolor...</td>
+                        <td>Umar Shareef</td>
+                        <td>Yasir Rasheed</td>
+                        <td>12/9/2020</td>
+                        <td>12/31/2020</td>
+                        <td>Open</td>
+                      </tr>
+                      <tr>
+                        <td>2nd incident</td>
+                        <td class="description" title = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque perferendis ipsum repudiandae nulla sequi culpa! Sint nulla fugit quidem tenetur magni corrupti expedita magnam vitae, at totam voluptatum iusto aliquam.">Lorem ipsum dolor...</td>
+                        <td>Nawaz Shareef</td>
+                        <td>Khan Rasheed</td>
+                        <td>11/9/2020</td>
+                        <td>12/31/2020</td>
+                        <td>New</td>
+                      </tr>
+                      <tr>
+                        <td>Third incident</td>
+                        <td class="description" title = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque perferendis ipsum repudiandae nulla sequi culpa! Sint nulla fugit quidem tenetur magni corrupti expedita magnam vitae, at totam voluptatum iusto aliquam.">Lorem ipsum dolor...</td>
+                        <td>Shahbaz Shareef</td>
+                        <td>Imran Khan</td>
+                        <td>10/9/2020</td>
+                        <td>12/15/2020</td>
+                        <td>In Progress</td>
+                      </tr>
+                      <tr>
+                        <td>Forth incident</td>
+                        <td class="description" title = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque perferendis ipsum repudiandae nulla sequi culpa! Sint nulla fugit quidem tenetur magni corrupti expedita magnam vitae, at totam voluptatum iusto aliquam.">Lorem ipsum dolor...</td>
+                        <td>Habib Shareef</td>
+                        <td>Pagal Khan</td>
+                        <td>09/9/2020</td>
+                        <td>12/5/2020</td>
+                        <td>Closed</td>
+                      </tr>
+                      <tr>
+                        <td>Fifth incident</td>
+                        <td class="description" title = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque perferendis ipsum repudiandae nulla sequi culpa! Sint nulla fugit quidem tenetur magni corrupti expedita magnam vitae, at totam voluptatum iusto aliquam.">Lorem ipsum dolor...</td>
+                        <td>Abbas</td>
+                        <td>Chawal Khan</td>
+                        <td>2/9/2020</td>
+                        <td>12/15/2020</td>
+                        <td>Rejected</td>
+                      </tr>
+                      <tr>
+                        <td>Fifth incident</td>
+                        <td class="description" title = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque perferendis ipsum repudiandae nulla sequi culpa! Sint nulla fugit quidem tenetur magni corrupti expedita magnam vitae, at totam voluptatum iusto aliquam.">Lorem ipsum dolor...</td>
+                        <td>Abbas</td>
+                        <td>Chawal Khan</td>
+                        <td>2/9/2020</td>
+                        <td>12/15/2020</td>
+                        <td>Rejected</td>
+                      </tr>
+                      <tr>
+                        <td>Fifth incident</td>
+                        <td class="description" title = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque perferendis ipsum repudiandae nulla sequi culpa! Sint nulla fugit quidem tenetur magni corrupti expedita magnam vitae, at totam voluptatum iusto aliquam.">Lorem ipsum dolor...</td>
+                        <td>Abbas</td>
+                        <td>Chawal Khan</td>
+                        <td>2/9/2020</td>
+                        <td>12/15/2020</td>
+                        <td>Rejected</td>
+                      </tr>
+                      <tr>
+                        <td>Fifth incident</td>
+                        <td class="description" title = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque perferendis ipsum repudiandae nulla sequi culpa! Sint nulla fugit quidem tenetur magni corrupti expedita magnam vitae, at totam voluptatum iusto aliquam.">Lorem ipsum dolor...</td>
+                        <td>Abbas</td>
+                        <td>Chawal Khan</td>
+                        <td>2/9/2020</td>
+                        <td>12/15/2020</td>
+                        <td>Rejected</td>
+                      </tr>
+                      <tr>
+                        <td>Fifth incident</td>
+                        <td class="description" title = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque perferendis ipsum repudiandae nulla sequi culpa! Sint nulla fugit quidem tenetur magni corrupti expedita magnam vitae, at totam voluptatum iusto aliquam.">Lorem ipsum dolor...</td>
+                        <td>Abbas</td>
+                        <td>Chawal Khan</td>
+                        <td>2/9/2020</td>
+                        <td>12/15/2020</td>
+                        <td>Rejected</td>
+                      </tr>
+                      <tr>
+                        <td>Fifth incident</td>
+                        <td class="description" title = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque perferendis ipsum repudiandae nulla sequi culpa! Sint nulla fugit quidem tenetur magni corrupti expedita magnam vitae, at totam voluptatum iusto aliquam.">Lorem ipsum dolor...</td>
+                        <td>Abbas</td>
+                        <td>Chawal Khan</td>
+                        <td>2/9/2020</td>
+                        <td>12/15/2020</td>
+                        <td>Rejected</td>
+                      </tr>
+                      <tr>
+                        <td>Fifth incident</td>
+                        <td class="description" title = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque perferendis ipsum repudiandae nulla sequi culpa! Sint nulla fugit quidem tenetur magni corrupti expedita magnam vitae, at totam voluptatum iusto aliquam.">Lorem ipsum dolor...</td>
+                        <td>Abbas</td>
+                        <td>Chawal Khan</td>
+                        <td>2/9/2020</td>
+                        <td>12/15/2020</td>
+                        <td>Rejected</td>
+                      </tr>
+                      <tr>
+                        <td>Fifth incident</td>
+                        <td class="description" title = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque perferendis ipsum repudiandae nulla sequi culpa! Sint nulla fugit quidem tenetur magni corrupti expedita magnam vitae, at totam voluptatum iusto aliquam.">Lorem ipsum dolor...</td>
+                        <td>Abbas</td>
+                        <td>Chawal Khan</td>
+                        <td>2/9/2020</td>
+                        <td>12/15/2020</td>
+                        <td>Rejected</td>
+                      </tr>
+                      <tr>
+                        <td>Fifth incident</td>
+                        <td class="description" title = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque perferendis ipsum repudiandae nulla sequi culpa! Sint nulla fugit quidem tenetur magni corrupti expedita magnam vitae, at totam voluptatum iusto aliquam.">Lorem ipsum dolor...</td>
+                        <td>Abbas</td>
+                        <td>Chawal Khan</td>
+                        <td>2/9/2020</td>
+                        <td>12/15/2020</td>
+                        <td>Rejected</td>
+                      </tr>
+                      <tr>
+                        <td>Fifth incident</td>
+                        <td class="description" title = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque perferendis ipsum repudiandae nulla sequi culpa! Sint nulla fugit quidem tenetur magni corrupti expedita magnam vitae, at totam voluptatum iusto aliquam.">Lorem ipsum dolor...</td>
+                        <td>Abbas</td>
+                        <td>Chawal Khan</td>
+                        <td>2/9/2020</td>
+                        <td>12/15/2020</td>
+                        <td>Rejected</td>
+                      </tr>
+                      <tr>
+                        <td>Fifth incident</td>
+                        <td class="description" title = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque perferendis ipsum repudiandae nulla sequi culpa! Sint nulla fugit quidem tenetur magni corrupti expedita magnam vitae, at totam voluptatum iusto aliquam.">Lorem ipsum dolor...</td>
+                        <td>Abbas</td>
+                        <td>Chawal Khan</td>
+                        <td>2/9/2020</td>
+                        <td>12/15/2020</td>
+                        <td>Rejected</td>
+                      </tr>
+                      <tr>
+                        <td>Fifth incident</td>
+                        <td class="description" title = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque perferendis ipsum repudiandae nulla sequi culpa! Sint nulla fugit quidem tenetur magni corrupti expedita magnam vitae, at totam voluptatum iusto aliquam.">Lorem ipsum dolor...</td>
+                        <td>Abbas</td>
+                        <td>Chawal Khan</td>
+                        <td>2/9/2020</td>
+                        <td>12/15/2020</td>
+                        <td>Rejected</td>
+                      </tr>
+
+                    </tbody>
+                  </table>
+            
+                  <ul class="pagination right">
+                    <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+                    <li class="active"><a href="#!">1</a></li>
+                    <li class="waves-effect"><a href="#!">2</a></li>
+                    <li class="waves-effect"><a href="#!">3</a></li>
+                    <li class="waves-effect"><a href="#!">4</a></li>
+                    <li class="waves-effect"><a href="#!">5</a></li>
+                    <li class="waves-effect"><a href="#!">6</a></li>
+                    <li class="waves-effect"><a href="#!">7</a></li>
+                    <li class="waves-effect"><a href="#!">8</a></li>
+                    <li class="waves-effect"><a href="#!">9</a></li>
+                    <li class="waves-effect"><a href="#!">10</a></li>
+                    <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+                  </ul>
+            </div>
+        </div>
+     
+    </div>
+
+    
+</section>
+
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.sidenav').sidenav();
+            $('.fixed-action-btn').floatingActionButton();
+            $('.pushpin').pushpin();
+
+
+           
+        });
+    </script>
+</body>
+
+</html>
