@@ -1,0 +1,200 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <title>Incident Manager</title>
+    <style>
+     
+            nav .badge{
+            position: relative;
+            top: 20px;
+            right: 20px;
+            }
+            /* input[type="text"]:not(.browser-default):focus:not([readonly]) + label{
+              color: red;
+            } */
+        /* Small devices  */
+        @media (min-width: 300px) {
+            
+        }
+
+        /* (tablets, 768px and up) */
+        @media (min-width: 700px) {}
+
+        /* Large Tablets  */
+        @media (min-width: 1000px) {
+           
+        }
+
+        /* Computer */
+        @media (min-width: 1500px) {
+              
+        }
+    </style>
+</head>
+
+<body>
+    <!-- navbar -->
+  <header>
+    <nav class="nav-wrapper indigo darken-4">
+      <div class="container">
+
+        <a href="#" class="brand-logo">Incident Manager</a>
+        <a href="#" class="sidenav-trigger" data-target="mobile-menu">
+          <i class="material-icons">menu</i>
+        </a>
+        <ul class="right hide-on-med-and-down">
+          <li><a >Incidents</a></li>
+          <li><a>Users <i class="material-icons"></i> </a> </li>
+          <li><a >Contact</a></li>   
+          <li><a href="" class="btn-floating z-depth-0 indigo darken-4">
+            <i class="material-icons">notifications</i>
+          </a></li>
+          <li><span class="badge white-text new pink">5</span></li>     
+        </ul>
+        <!-- for mobile-->
+        <ul class="sidenav grey lighten-2" id="mobile-menu">          
+          <li><a  class="sidenav-close">Incidents</a></li>
+          <li><a  class="sidenav-close">Users</a></li>
+          <li><a  class="sidenav-close">Contact</a></li>
+          <li><a href="" class=" white-text">
+            <i class="material-icons">notifications</i>
+            <span class="Indigo-text" >5</span>
+          </a></li>  
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+<section class="container ">
+
+    <div class="row ">
+        <div class="col s6">
+            <div class="left">
+                <h4 class="title">Add New Incident</h4>
+            </div>          
+        </div>        
+    </div>   
+
+</section>
+
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col s12 l12">
+
+        <form>
+          <div class="input-field">         
+            <input type="text" id="title">
+            <label for="title" class="">Title</label>
+          </div>
+
+          <div class="input-field"> 
+            <textarea id="description" class="materialize-textarea"></textarea>
+            <label for="description" class="">Description</label>
+          </div>
+
+          <div class="input-field">
+            <textarea id="additionalDetails" class="materialize-textarea"></textarea>
+            <label for="additionalDetails" class="">Additional Details</label>
+          </div>
+
+          <div class="input-field">         
+            <input type="text" id="startTime">
+            <label for="startTime" class="">Start Time</label>
+          </div>
+
+          <div class="row">
+              <div class="input-field col s6">             
+                <input type="text" id="dueDateDate" class="datepicker">
+                <label for="dueDateDate" class="">Due Date (Pick Date)</label>
+              </div>
+
+              <div class="input-field col s6">             
+                <input type="text" id="dueDateTime" class="timepicker">
+                <label for="dueDateTime" class="">Due Date (Pick Time)</label>
+              </div>
+          </div>
+         
+
+       
+          <div class="file-field input-field">
+            <div class="btn indigo darken-2">
+              <i class="material-icons ">file_upload</i>
+              <input type="file" id="attachment" multiple>
+            </div>
+            <div class="file-path-wrapper">
+              <input class="file-path validate" type="text" placeholder="Upload upto 3 files">
+            </div>
+          </div>
+         
+
+          <div class="input-field ">         
+              
+            <button class="btn green darken-2">
+                <span>Save</span>
+                <i class="material-icons right">save</i>
+                </a>
+              </button>
+
+            <button class="btn yellow darken-4 ">
+              <span>Cancel</span>
+              <i class="material-icons right">cancel</i>
+              </a>
+            </button>
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <script>
+
+        // document.addEventListener('DOMContentLoaded', function() {
+        //     var elems = document.querySelectorAll('.datepicker');
+        //     var instances = M.Datepicker.init(elems, options);
+        //   });
+
+          // Or with jQuery
+
+          $(document).ready(function(){
+            $('.datepicker').datepicker();
+          });
+
+          // document.addEventListener('DOMContentLoaded', function() {
+          //   var elems = document.querySelectorAll('.timepicker');
+          //   var instances = M.Timepicker.init(elems, options);
+          // });
+
+  // Or with jQuery
+
+  $(document).ready(function(){
+    $('.timepicker').timepicker();
+  });
+
+        $(document).ready(function () {
+            $('.sidenav').sidenav();
+            $('.fixed-action-btn').floatingActionButton();
+            $('.pushpin').pushpin();
+		      	$('select').formSelect();
+
+           
+        });
+    </script>
+</body>
+
+</html>
