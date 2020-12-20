@@ -88,12 +88,29 @@
 <section>
   <div class="container">
     <div class="row">
-      <div class="col s12 l12">
+      <div class="col s12 l10 offset-l1">
 
         <form>
-          <div class="input-field">         
-            <input type="text" id="title">
-            <label for="title" class="">Title</label>
+
+        
+
+          <div class="row">
+            <div class="col s12 l6">
+              <div class="input-field">
+                <input type="text" id="title">
+                <label for="title" class="">Title</label>
+              </div>
+            </div>
+          
+            <div class="input-field col s12 l6">
+              <select>
+                <option value="5">Umar Shareef</option>
+                <option value="10">Nawaz Shareef</option>
+                <option value="15">Imran Khan</option>
+                <option value="20">Trump</option>
+              </select>
+              <label>Assignee</label>
+            </div>
           </div>
 
           <div class="input-field"> 
@@ -105,11 +122,19 @@
             <textarea id="additionalDetails" class="materialize-textarea"></textarea>
             <label for="additionalDetails" class="">Additional Details</label>
           </div>
+ 
 
-          <div class="input-field">         
-            <input type="text" id="startTime">
-            <label for="startTime" class="">Start Time</label>
-          </div>
+          <div class="row">
+            <div class="input-field col s6">             
+              <input type="text" id="startTimeDate" class="datepicker">
+              <label for="startTimeDate" class="">When the problem started (Pick Date)</label>
+            </div>
+
+            <div class="input-field col s6">             
+              <input type="text" id="startTimeTime" class="timepicker">
+              <label for="startTimeime" class="">When the problem started (Pick Time)</label>
+            </div>
+        </div>
 
           <div class="row">
               <div class="input-field col s6">             
@@ -127,7 +152,7 @@
        
           <div class="file-field input-field">
             <div class="btn indigo darken-2">
-              <i class="material-icons ">file_upload</i>
+              <i class="material-icons ">attachment</i>
               <input type="file" id="attachment" multiple>
             </div>
             <div class="file-path-wrapper">
