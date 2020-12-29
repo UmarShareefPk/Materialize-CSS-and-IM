@@ -1,0 +1,351 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <title>Incident Manager</title>
+    <style>
+     
+            nav .badge{
+            position: relative;
+            top: 20px;
+            right: 20px;
+            }
+            /* input[type="text"]:not(.browser-default):focus:not([readonly]) + label{
+              color: red;
+            } */
+
+            /* textarea {
+                  border-bottom: none!important;
+                  box-shadow: none!important;
+              } */
+
+           
+
+              span.im-createTime{
+                font-size: 12px;
+              }
+
+              ul.commentFiles{
+               text-align: center;
+              }
+              ul.commentFiles li {
+                list-style: none;
+                display: inline;
+                padding-left: 25px
+              }
+        /* Small devices  */
+        @media (min-width: 300px) {
+            
+        }
+
+        /* (tablets, 768px and up) */
+        @media (min-width: 700px) {}
+
+        /* Large Tablets  */
+        @media (min-width: 1000px) {
+           
+        }
+
+        /* Computer */
+        @media (min-width: 1500px) {
+              
+        }
+    </style>
+</head>
+
+<body>
+    <!-- navbar -->
+  <header>
+    <nav class="nav-wrapper indigo darken-4">
+      <div class="container">
+
+        <a href="#" class="brand-logo">Incident Manager</a>
+        <a href="#" class="sidenav-trigger" data-target="mobile-menu">
+          <i class="material-icons">menu</i>
+        </a>
+        <ul class="right hide-on-med-and-down">
+          <li><a >Incidents</a></li>
+          <li><a>Users <i class="material-icons"></i> </a> </li>
+          <li><a >Contact</a></li>   
+          <li><a href="" class="btn-floating z-depth-0 indigo darken-4">
+            <i class="material-icons">notifications</i>
+          </a></li>
+          <li><span class="badge white-text new pink">5</span></li>     
+        </ul>
+        <!-- for mobile-->
+        <ul class="sidenav grey lighten-2" id="mobile-menu">          
+          <li><a  class="sidenav-close">Incidents</a></li>
+          <li><a  class="sidenav-close">Users</a></li>
+          <li><a  class="sidenav-close">Contact</a></li>
+          <li><a href="" class=" white-text">
+            <i class="material-icons">notifications</i>
+            <span class="Indigo-text" >5</span>
+          </a></li>  
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+<section class="container ">
+
+    <div class="row ">
+        <div class="col s6">
+            <div class="left">
+                <h4 class="title">Incident Details</h4>
+            </div>          
+        </div>        
+    </div>   
+
+</section>
+
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col s12 l12 ">
+          
+          <div class="row">
+            <div class="col s9">
+                 <h5 class="left Indigo-text darken-4"> Title will go here <i class="material-icons">edit</i> <span class="im-createTime black-text ">2020/12/22 5:00 PM</span></h5>
+                  
+            </div>
+            <div class="col s3">
+              <h5 class="left Indigo-text darken-4"> </h5> 
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col s12 l6">
+           
+                 <h7 class="left Indigo-text darken-4">Description : <i class="material-icons">edit</i></h7> 
+                  <div class="input-field">
+                    <textarea id="description" class="materialize-textarea">
+                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa quibusdam maiores totam, saepe ipsa necessitatibus magni! Molestias beatae, asperiores, tempore maiores odio sunt sit quasi veritatis architecto incidunt at ipsum.
+                     </textarea>                  
+                  </div>
+
+                  <h7 class="left Indigo-text darken-4">Additional Details : <i class="material-icons">edit</i></h7> 
+                  <div class="input-field">
+                    <textarea id="description" class="materialize-textarea">
+                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa quibusdam maiores totam, saepe ipsa necessitatibus magni! Molestias beatae, asperiores, tempore maiores odio sunt sit quasi veritatis architecto incidunt at ipsum.
+                     </textarea>                  
+                  </div>
+
+                  <h7 class="Indigo-text darken-4"><i class="material-icons prefix">attachment</i> Attachments:</h7> 
+                  <div class="input-field">
+                     <h5  class="center Indigo-text darken-4">File 1</h5>     
+                     <h5  class="center Indigo-text darken-4">File 2</h5>     
+                     <h5  class="center Indigo-text darken-4">File 3</h5>            
+                  </div>
+
+                 
+                  <h4>Comments</h4>
+                    <div class="card">
+                      <div class="card-content">
+                        <div class="row">
+                          <div class="col s12">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores tempora quibusdam cum iure alias fugiat. Qui ipsum labore fuga recusandae quo est aliquid sunt repellendus soluta odio, consequatur inventore animi!
+                            </p>
+                            <br/>
+                            <p>
+                              <ul class="commentFiles">
+                                <li>  <a  class="center Indigo-text darken-4">File 1</a>   </li>
+                                <li>  <a  class="center Indigo-text darken-4">File 2</a>   </li>
+                                <li>  <a  class="center Indigo-text darken-4">File 3</a>   </li>
+                             </ul>
+                            </p>                              
+                          </div>                          
+                      </div> 
+                      <div class="row">
+                        <div class="col s6">
+                            <h6  class="left Indigo-text darken-4">Umar Shareef </h6>                            
+                        </div>
+                        <div class="col s6">                        
+                          <h6  class="right Indigo-text darken-4">Sun Dec 27 2020 12:37:40</h6>
+                      </div>
+                      </div>       
+                    </div>
+                  </div>    
+                  <div class="card">
+                    <div class="card-content">
+                      <div class="row">
+                        <div class="col s12">
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores tempora quibusdam cum iure alias fugiat. Qui ipsum labore fuga recusandae quo est aliquid sunt repellendus soluta odio, consequatur inventore animi!
+                          </p>
+                          <br/>
+                          <p>
+                            <ul class="commentFiles">
+                              <li>  <a  class="center Indigo-text darken-4">File 1</a>   </li>
+                              <li>  <a  class="center Indigo-text darken-4">File 2</a>   </li>
+                              <li>  <a  class="center Indigo-text darken-4">File 3</a>   </li>
+                           </ul>
+                          </p>                              
+                        </div>                          
+                    </div> 
+                    <div class="row">
+                      <div class="col s6">
+                          <h6  class="left Indigo-text darken-4">Umar Shareef </h6>                            
+                      </div>
+                      <div class="col s6">                        
+                        <h6  class="right Indigo-text darken-4">Sun Dec 27 2020 12:37:40</h6>
+                    </div>
+                    </div>       
+                  </div>
+                </div>   
+            
+               
+                    <h5>Add Comment</h5>
+                    <div class="input-field"> 
+                       <textarea id="comment" class="materialize-textarea"></textarea> 
+                       <label for="comment" class="">Comment</label>                    
+                    </div>
+                    <div class="file-field input-field">
+                      <div class="btn indigo darken-2">
+                        <i class="material-icons ">attachment</i>
+                        <input type="file" id="attachment" multiple>
+                      </div>
+                      <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text" placeholder="Upload upto 3 files">
+                      </div>
+                    </div>
+
+                    <div class="input-field center ">         
+              
+                      <button class="btn green darken-2">
+                          <span>Add</span>
+                          <i class="material-icons right">save</i>
+                          </a>
+                        </button>
+          
+                      <button class="btn yellow darken-4 ">
+                        <span>Cancel</span>
+                        <i class="material-icons right">cancel</i>
+                        </a>
+                      </button>
+                    </div>
+
+                 
+
+            
+            </div>
+            
+
+            <div class="col s12 l5 offset-l1  ID-dropdowns">
+            
+              <table>
+                <tr>
+                  <td>
+                    <h7 class="left Indigo-text darken-4">Assignee </h7>
+                  </td>
+                  <td>
+                    <select>
+                      <option value="5">Umar Shareef</option>
+                      <option value="10">Nawaz Shareef</option>
+                      <option value="15">Imran Khan</option>
+                      <option value="20">Trump</option>
+                    </select>
+                  </td>
+                </tr>
+            
+                <tr>
+                  <td>
+                    <h7 class="left Indigo-text darken-4">Status </h7>
+                  </td>
+                  <td>
+                    <select>
+                      <option value="5">In Progress</option>
+                      <option value="10">Closed</option>
+                      <option value="15">Approved</option>
+                    </select>
+                  </td>
+                </tr>
+            
+                <tr>
+                  <td>
+                    <h7 class="left Indigo-text darken-4">Due Date </h7>
+                  </td>
+                  <td>
+                    <div class="input-field ">
+                      <input type="text" id="dueDateDate" class="datepicker">
+                      <label for="dueDateDate" class="">Pick Date</label>
+                    </div>
+                    <div class="input-field ">
+                      <input type="text" id="dueDateTime" class="timepicker">
+                      <label for="dueDateTime" class="">Pick Time</label>
+                    </div>
+                  </td>
+                </tr>
+            
+            
+                <tr>
+                  <td>
+                    <h7 class="left Indigo-text darken-4"> Start Time</h7>
+                  </td>
+                  <td>
+                    <div class="input-field">
+                      <input type="text" id="startTimeDate" class="datepicker">
+                      <label for="startTimeDate" class=""> Pick Date</label>
+                    </div>
+                    <div class="input-field">
+                      <input readonly type="text" id="startTimeTime" class="timepicker">
+                      <label for="startTimeime" class="">Pick Time</label>
+                    </div>
+                  </td>
+                </tr>
+            
+              </table>
+            
+            </div>
+          </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <script>
+
+        // document.addEventListener('DOMContentLoaded', function() {
+        //     var elems = document.querySelectorAll('.datepicker');
+        //     var instances = M.Datepicker.init(elems, options);
+        //   });
+
+          // Or with jQuery
+
+          $(document).ready(function(){
+            $('.datepicker').datepicker();
+          });
+
+          // document.addEventListener('DOMContentLoaded', function() {
+          //   var elems = document.querySelectorAll('.timepicker');
+          //   var instances = M.Timepicker.init(elems, options);
+          // });
+
+  // Or with jQuery
+
+  $(document).ready(function(){
+    $('.timepicker').timepicker();
+  });
+
+        $(document).ready(function () {
+            $('.sidenav').sidenav();
+            $('.fixed-action-btn').floatingActionButton();
+            $('.pushpin').pushpin();
+		      	$('select').formSelect();
+
+           
+        });
+    </script>
+</body>
+
+</html>
