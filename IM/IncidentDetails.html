@@ -16,15 +16,27 @@
             top: 20px;
             right: 20px;
             }
-            /* input[type="text"]:not(.browser-default):focus:not([readonly]) + label{
-              color: red;
-            } */
+           
+            ::-webkit-scrollbar {
+                width: 7px;
+              }
 
-            /* textarea {
-                  border-bottom: none!important;
-                  box-shadow: none!important;
-              } */
+              /* Track */
+              ::-webkit-scrollbar-track {
+                box-shadow: inset 0 0 5px white; 
+                border-radius: 10px;
+              }
+              
+              /* Handle */
+              ::-webkit-scrollbar-thumb {
+                background: #1A237E; 
+                border-radius: 10px;
+              }
 
+              /* Handle on hover */
+              ::-webkit-scrollbar-thumb:hover {
+                background: darkslategray; 
+              }
            
 
               span.im-createTime{
@@ -37,8 +49,42 @@
               ul.commentFiles li {
                 list-style: none;
                 display: inline;
-                padding-left: 25px
+                padding-left: 25px;
+                cursor: pointer;
               }
+
+              ul.incidentFiles{
+               text-align: center;
+              }
+              ul.incidentFiles li {
+                list-style: none;
+                display: inline;
+                padding-left: 25px;
+                cursor: pointer;
+             
+              }
+
+              .darkslategrayText{
+                color: darkslategray;
+              }
+              
+              .updateBtn{
+                margin-right: 5px;
+              }
+
+              .commentHeader{
+                padding-bottom: 20px;
+              }
+
+              .inline-icon {
+                vertical-align: bottom;
+                font-size: 22px !important;
+              }
+
+              .actions-icon{
+                cursor: pointer;
+              }
+
         /* Small devices  */
         @media (min-width: 300px) {
             
@@ -112,7 +158,7 @@
           
           <div class="row">
             <div class="col s9">
-                 <h5 class="left Indigo-text darken-4"> Title will go here <i class="material-icons">edit</i> <span class="im-createTime black-text ">2020/12/22 5:00 PM</span></h5>
+                 <h5 class="left Indigo-text darken-4"> Title will go here <i class="material-icons actions-icon">edit</i> <span class="im-createTime black-text ">2020/12/22 5:00 PM</span></h5>
                   
             </div>
             <div class="col s3">
@@ -123,81 +169,75 @@
           <div class="row">
             <div class="col s12 l6">
            
-                 <h7 class="left Indigo-text darken-4">Description : <i class="material-icons">edit</i></h7> 
-                  <div class="input-field">
+                 <h7 class=" Indigo-text darken-4">Description : <i class="inline-icon material-icons actions-icon">edit</i></h7> 
+                 <div class="input-field">
+                  <p class="darkslategrayText">
+                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa quibusdam maiores totam, saepe ipsa necessitatibus magni! Molestias beatae, asperiores, tempore maiores odio sunt sit quasi veritatis architecto incidunt at ipsum.
+                  </p>                  
+                </div>                  
+                 <div class="input-field">
                     <textarea id="description" class="materialize-textarea">
                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa quibusdam maiores totam, saepe ipsa necessitatibus magni! Molestias beatae, asperiores, tempore maiores odio sunt sit quasi veritatis architecto incidunt at ipsum.
-                     </textarea>                  
+                     </textarea>   
+                     <button title="Save" class="btn green darken-2 right updateBtn"><i class="actions-icon material-icons">check</i></button>
+                     <button title="Cancel" class="btn yellow darken-2 right updateBtn"><i class="actions-icon material-icons">cancel</i></button>               
                   </div>
 
-                  <h7 class="left Indigo-text darken-4">Additional Details : <i class="material-icons">edit</i></h7> 
+                  <h7 class= "Indigo-text darken-4">Additional Details : <i class="inline-icon material-icons">edit</i></h7> 
                   <div class="input-field">
-                    <textarea id="description" class="materialize-textarea">
+                    <p class="darkslategrayText">
                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa quibusdam maiores totam, saepe ipsa necessitatibus magni! Molestias beatae, asperiores, tempore maiores odio sunt sit quasi veritatis architecto incidunt at ipsum.
-                     </textarea>                  
-                  </div>
-
-                  <h7 class="Indigo-text darken-4"><i class="material-icons prefix">attachment</i> Attachments:</h7> 
+                    </p>                  
+                  </div> 
                   <div class="input-field">
-                     <h5  class="center Indigo-text darken-4">File 1</h5>     
-                     <h5  class="center Indigo-text darken-4">File 2</h5>     
-                     <h5  class="center Indigo-text darken-4">File 3</h5>            
+                    <textarea  class="materialize-textarea">
+                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa quibusdam maiores totam, saepe ipsa necessitatibus magni! Molestias beatae, asperiores, tempore maiores odio sunt sit quasi veritatis architecto incidunt at ipsum.
+                     </textarea> 
+                     <button title="Save" class="btn green darken-2 right updateBtn"><i class="actions-icon material-icons">check</i></button>
+                     <button title="Cancel" class="btn yellow darken-2 right updateBtn"><i class="actions-icon material-icons">cancel</i></button>                    
                   </div>
 
+                  <h7 class="Indigo-text darken-4"><i class="material-icons inline-icon">attachment</i> Attachments:</h7> 
+                 <p>
+                    <ul class="input-field incidentFiles">
+                      <li  class="center Indigo-text darken-4"><i  title="Remove" class="actions-icon material-icons red-text inline-icon">cancel</i>File 1</li>     
+                      <li  class="center Indigo-text darken-4">File 2</li>     
+                      <li  class="center Indigo-text darken-4">File 3</li>            
+                    </ul>
+                </p>
                  
                   <h4>Comments</h4>
                     <div class="card">
                       <div class="card-content">
                         <div class="row">
                           <div class="col s12">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores tempora quibusdam cum iure alias fugiat. Qui ipsum labore fuga recusandae quo est aliquid sunt repellendus soluta odio, consequatur inventore animi!
+                            <p class="commentHeader"><a>Umar Shareef</a> added a comment. - 7 days ago 
+                             <span class="right">
+                              <i title="Edit Comment" class="actions-icon material-icons indigo-text darken-4">edit</i>
+                              <i title="Delete Comment" class="actions-icon material-icons red-text">cancel</i> 
+                            </span>  
                             </p>
+                              <p class="darkslategrayText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores tempora quibusdam cum iure alias fugiat. Qui ipsum labore fuga recusandae quo est aliquid sunt repellendus soluta odio, consequatur inventore animi!
+                            </p>
+                            <textarea class="materialize-textarea">
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa quibusdam maiores totam, saepe ipsa necessitatibus magni! Molestias beatae, asperiores, tempore maiores odio sunt sit quasi veritatis architecto incidunt at ipsum.
+                            </textarea>   
+                            <button title="Save" class="btn green darken-2 right updateBtn"><i class="actions-icon material-icons">check</i></button>
+                            <button title="Cancel" class="btn yellow darken-2 right updateBtn"><i class="actions-icon material-icons">cancel</i></button>               
+                        
                             <br/>
                             <p>
                               <ul class="commentFiles">
-                                <li>  <a  class="center Indigo-text darken-4">File 1</a>   </li>
+                                <li>  <a  class="center Indigo-text darken-4"><i title="Remove" class="actions-icon material-icons red-text inline-icon">cancel</i>File 1</a>   </li>
                                 <li>  <a  class="center Indigo-text darken-4">File 2</a>   </li>
                                 <li>  <a  class="center Indigo-text darken-4">File 3</a>   </li>
                              </ul>
                             </p>                              
-                          </div>                          
+                          </div> 
                       </div> 
-                      <div class="row">
-                        <div class="col s6">
-                            <h6  class="left Indigo-text darken-4">Umar Shareef </h6>                            
-                        </div>
-                        <div class="col s6">                        
-                          <h6  class="right Indigo-text darken-4">Sun Dec 27 2020 12:37:40</h6>
-                      </div>
-                      </div>       
                     </div>
                   </div>    
-                  <div class="card">
-                    <div class="card-content">
-                      <div class="row">
-                        <div class="col s12">
-                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores tempora quibusdam cum iure alias fugiat. Qui ipsum labore fuga recusandae quo est aliquid sunt repellendus soluta odio, consequatur inventore animi!
-                          </p>
-                          <br/>
-                          <p>
-                            <ul class="commentFiles">
-                              <li>  <a  class="center Indigo-text darken-4">File 1</a>   </li>
-                              <li>  <a  class="center Indigo-text darken-4">File 2</a>   </li>
-                              <li>  <a  class="center Indigo-text darken-4">File 3</a>   </li>
-                           </ul>
-                          </p>                              
-                        </div>                          
-                    </div> 
-                    <div class="row">
-                      <div class="col s6">
-                          <h6  class="left Indigo-text darken-4">Umar Shareef </h6>                            
-                      </div>
-                      <div class="col s6">                        
-                        <h6  class="right Indigo-text darken-4">Sun Dec 27 2020 12:37:40</h6>
-                    </div>
-                    </div>       
-                  </div>
-                </div>   
+                  
             
                
                     <h5>Add Comment</h5>
@@ -271,14 +311,20 @@
                     <h7 class="left Indigo-text darken-4">Due Date </h7>
                   </td>
                   <td>
-                    <div class="input-field ">
-                      <input type="text" id="dueDateDate" class="datepicker">
-                      <label for="dueDateDate" class="">Pick Date</label>
-                    </div>
-                    <div class="input-field ">
-                      <input type="text" id="dueDateTime" class="timepicker">
-                      <label for="dueDateTime" class="">Pick Time</label>
-                    </div>
+                    <p><i class="inline-icon material-icons">edit</i> March 22, 2020 </p>
+                    <div class="">
+                      <div class="input-field ">
+                        <input type="text" id="dueDateDate" class="datepicker">
+                        <label for="dueDateDate" class="">Pick Date</label>
+                      </div>
+                      <div class="input-field ">
+                        <input type="text" id="dueDateTime" class="timepicker">
+                        <label for="dueDateTime" class="">Pick Time</label>
+                      </div>
+                      <button title="Save" class="btn green darken-2 right updateBtn"><i class="actions-icon material-icons">check</i></button>
+                      <button title="Cancel" class="btn yellow darken-2 right updateBtn"><i class="actions-icon material-icons">cancel</i></button>                    
+                   
+                  </div>
                   </td>
                 </tr>
             
@@ -288,14 +334,20 @@
                     <h7 class="left Indigo-text darken-4"> Start Time</h7>
                   </td>
                   <td>
-                    <div class="input-field">
-                      <input type="text" id="startTimeDate" class="datepicker">
-                      <label for="startTimeDate" class=""> Pick Date</label>
-                    </div>
-                    <div class="input-field">
-                      <input readonly type="text" id="startTimeTime" class="timepicker">
-                      <label for="startTimeime" class="">Pick Time</label>
-                    </div>
+                    <p class="hide"><i class="inline-icon material-icons">edit</i> March 22, 2020 </p>
+                    <div class="">
+                      <div class="input-field">
+                        <input type="text" id="startTimeDate" class="datepicker">
+                        <label for="startTimeDate" class=""> Pick Date</label>
+                      </div>
+                      <div class="input-field">
+                        <input readonly type="text" id="startTimeTime" class="timepicker">
+                        <label for="startTimeime" class="">Pick Time</label>
+                      </div>
+                      <button title="Save" class="btn green darken-2 right updateBtn"><i class="actions-icon material-icons">check</i></button>
+                      <button title="Cancel" class="btn yellow darken-2 right updateBtn"><i class="actions-icon material-icons">cancel</i></button>                    
+                   
+                  </div>
                   </td>
                 </tr>
             
