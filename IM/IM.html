@@ -40,6 +40,19 @@
             .titleBar .row{
                 margin-top: -100px;
             } 
+
+            .notifications.dropdown-content{
+              width: 300px !important;
+              margin-top: 83px !important;
+              margin-right: 100px !important;
+              background-color: #1A237E !important;
+              padding: 0 10px;
+            }
+
+            .notification-card{
+              background-color: white;
+              color: #1A237E;
+            }
         
         /* Small devices  */
         @media (min-width: 300px) {
@@ -84,9 +97,26 @@
           <li><a >Incidents</a></li>
           <li><a>Users <i class="material-icons"></i> </a> </li>
           <li><a >Contact</a></li>   
-          <li><a href="" class="btn-floating z-depth-0 indigo darken-4">
-            <i class="material-icons">notifications</i>
-          </a></li>
+          <li>
+              <a href="#" class="btn-floating z-depth-0 indigo darken-4 dropdown-trigger" data-target='dropdown1'>
+                   <i class="material-icons">notifications</i>
+              </a>
+              <ul id='dropdown1' class='notifications dropdown-content'>
+                <li>
+                  <div class="card notification-card">
+                    <div class="card-content">
+                      <h7>Umar Shareef created an Incident </h7>
+                      <h9>Title will show here</h9>
+                    </div>
+                  </div>
+                  <div class="card notification-card">
+                    <div class="card-content">
+                      <h7>Qamar Shareef updated an Incident </h7>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+        </li>
           <li><span class="badge white-text new pink">5</span></li>     
         </ul>
         <!-- for mobile-->
@@ -94,10 +124,13 @@
           <li><a  class="sidenav-close">Incidents</a></li>
           <li><a  class="sidenav-close">Users</a></li>
           <li><a  class="sidenav-close">Contact</a></li>
-          <li><a href="" class=" white-text">
-            <i class="material-icons">notifications</i>
-            <span class="Indigo-text" >5</span>
-          </a></li>  
+          <li>
+              <a href="#hrh" class="white-text" >
+                <i class="material-icons">notifications</i>
+                <span class="Indigo-text">5</span>
+              </a>
+             
+          </li>  
         </ul>
       </div>
     </nav>
@@ -238,7 +271,8 @@
             $('.sidenav').sidenav();
             $('.fixed-action-btn').floatingActionButton();
             $('.pushpin').pushpin();
-			$('select').formSelect();
+		      	$('select').formSelect();
+            $('.dropdown-trigger').dropdown();
 
            
         });
