@@ -43,15 +43,28 @@
 
             .notifications.dropdown-content{
               width: 300px !important;
-              margin-top: 83px !important;
-              margin-right: 100px !important;
-              background-color: #1A237E !important;
-              padding: 0 10px;
+              margin-top: 116px !important;
+              margin-right: 100px !important;    
+              min-height: 50vh;
+              border: 1px solid white;
+              background-color:  #1A237E;
             }
 
-            .notification-card{
-              background-color: white;
-              color: #1A237E;
+            .notification-box.unread{
+              background-color:  #1A237E;
+              color: white;
+              padding: 2px 20px;
+              border-bottom: 1px solid white;
+            }
+
+            .notification-box.read{
+              background-color:  #1A237E;
+              color: silver;
+              padding: 2px 20px;
+              border-bottom: 1px solid white;
+            }
+            .notification-box:hover{
+              text-decoration: underline;
             }
         
         /* Small devices  */
@@ -102,19 +115,31 @@
                    <i class="material-icons">notifications</i>
               </a>
               <ul id='dropdown1' class='notifications dropdown-content'>
+                <li>               
+                    <div class="notification-box unread">
+                      <p> Umar Shareef created and Incident and assigned it to you. </p>
+                    </div>                   
+                  </li>
                 <li>
-                  <div class="card notification-card">
-                    <div class="card-content">
-                      <h7>Umar Shareef created an Incident </h7>
-                      <h9>Title will show here</h9>
-                    </div>
-                  </div>
-                  <div class="card notification-card">
-                    <div class="card-content">
-                      <h7>Qamar Shareef updated an Incident </h7>
-                    </div>
-                  </div>
+                    <div class="notification-box read">
+                      <p> Umar Shareef added a comment. </p>
+                    </div>                  
                 </li>
+                <li>
+                  <div class="notification-box read">
+                    <p> Umar Shareef added a comment. </p>
+                  </div>                  
+              </li>
+              <li>
+                <div class="notification-box unread">
+                  <p> Umar Shareef added a comment. </p>
+                </div>                  
+            </li>
+            <li>
+              <div class="notification-box unread">
+                <p> Umar Shareef added a comment. </p>
+              </div>                  
+          </li>
               </ul>
         </li>
           <li><span class="badge white-text new pink">5</span></li>     
